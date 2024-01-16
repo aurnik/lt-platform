@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img src="./resources/google-play-store/feature-graphic.png" alt="LT logo" width="720">
+</p>
 
-## Getting Started
+## Language Transfer
 
-First, run the development server:
+[Language Transfer](https://www.languagetransfer.org/) is a project by Mihalis Eleftheriou, building audio courses for learning languages, completely free.
+You can find all of them on the [Language Transfer website](https://www.languagetransfer.org/free-courses-1).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## LT Platform
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Goals
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Language Transfer platform should be:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 100% free, like the Language Transfer courses
+- Accessible and easy to use for the visually impaired
+- Considerate of users in areas with poor network quality, expensive Internet access, or low-end devices
+- Free of distractions and annoyances, like advertisements or superfluous notifications
+- Self-sustaining: maintainable and easy to build even in the absence of the original maintainers
+- Private by design, sharing only anonymous usage statistics
 
-## Learn More
+## Contributions
 
-To learn more about Next.js, take a look at the following resources:
+We welcome contributions! Be sure to read the [contributing guidelines](./CONTRIBUTING.md) and the [code of conduct](./CODE_OF_CONDUCT.md) before engaging with the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The code for the Language Transfer app is provided under the [GPLv2 license](./LICENSE).
 
-## Deploy on Vercel
+## Support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Please consider supporting Language Transfer's Patreon campaign. This money directly funds Mihalis and the development of future language courses as well as other materials.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href="https://www.patreon.com/languagetransfer"><img alt="Become a Patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png"></a>
