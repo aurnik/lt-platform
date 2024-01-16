@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./resources/google-play-store/feature-graphic.png" alt="LT logo" width="720">
-</p>
-
 ## Language Transfer
 
 [Language Transfer](https://www.languagetransfer.org/) is a project by Mihalis Eleftheriou, building audio courses for learning languages, completely free.
