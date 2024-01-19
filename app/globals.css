@@ -13,7 +13,7 @@
   --background-rgb: 255, 255, 255;
 }
 
-/* Dark Mode */
+/* Dark Mode Variables */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -58,6 +58,7 @@ h3 {
   margin: 2rem 0;
 }
 
+/* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
