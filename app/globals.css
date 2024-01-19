@@ -15,10 +15,10 @@
 
 /* Dark Mode Variables */
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 0, 0, 0;
-  }
+  } */
 }
 
 * {
@@ -60,7 +60,7 @@ h3 {
 
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
-  html {
+  /* html {
     color-scheme: dark;
-  }
+  } */
 }

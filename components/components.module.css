@@ -5,8 +5,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   height: var(--height);
   border-radius: calc(var(--height) / 2);
   font-weight: bold;
