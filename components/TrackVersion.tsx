@@ -5,12 +5,15 @@ import styles from './components.module.css'
 
 interface TrackVersionProps {
   version: number
-  title: string
+  courseTitle: string
+  trackTitle: string
 }
-export default function TrackVersion({ version, title }: TrackVersionProps) {
+export default function TrackVersion({ version, courseTitle, trackTitle }: TrackVersionProps) {
+
+
   return (
     <div className={styles.trackVersionContainer}>
-      <Audio version={version} title={title} />
+      <Audio version={version} courseTitle={courseTitle} trackTitle={trackTitle} />
       <Transcript />
       <Feedback />
     </div>

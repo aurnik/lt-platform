@@ -1,16 +1,21 @@
+import Link from 'next/link'
 import styles from './components.module.css'
+import kebabCase from 'just-kebab-case';
 
 interface AudioProps {
   version: number
-  title: string
+  courseTitle: string
+  trackTitle: string
 }
 
-export default function Audio({ version, title }: AudioProps) {
+export default function Audio({ version, courseTitle, trackTitle }: AudioProps) {
+  const link = kebabCase(courseTitle) + '/' + kebabCase(trackTitle);
+  
   return (
     <div>
       <div className={styles.title}>
         <div className={styles.version}>{'v' + version}</div>
-        {title}
+        <Link href={link}>{courseTitle} {trackTitle}</Link>
       </div>
       <div className={styles.audioPlayer}></div>
     </div>
