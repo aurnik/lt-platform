@@ -12,6 +12,7 @@
   font-weight: bold;
   margin-right: 0.5rem;
 }
+tr
 .title {
   display: flex;
   flex-direction: row;
@@ -55,4 +56,12 @@
 
 .trackVersionContainer {
   margin-bottom: 4rem;
+}
+
+.highlightedText {
+  background-color: yellow;
+}
+
+.tagsFirst {
+  background-color: red;
 }
