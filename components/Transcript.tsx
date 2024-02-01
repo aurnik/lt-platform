@@ -1,10 +1,91 @@
+'use client'
+import React, { useEffect, useRef } from 'react'
 import styles from './components.module.css'
 
+const exampleAnnotations = [
+  {
+    '@context': 'http://www.w3.org/ns/anno.jsonld',
+    type: 'Annotation',
+    body: [
+      {
+        type: 'TextualBody',
+        value: 'This is a test comment.',
+        purpose: 'commenting',
+      },
+      {
+        type: 'TextualBody',
+        purpose: 'tagging',
+        value: 'first',
+      },
+    ],
+    target: {
+      selector: [
+        {
+          type: 'TextQuoteSelector',
+          exact: 'ngil',
+        },
+        {
+          type: 'TextPositionSelector',
+          start: 304,
+          end: 330,
+        },
+      ],
+    },
+  },
+  {
+    '@context': 'http://www.w3.org/ns/anno.jsonld',
+    type: 'Annotation',
+    body: [
+      {
+        type: 'TextualBody',
+        value: 'This is also a test comment.',
+        purpose: 'commenting',
+      },
+    ],
+    target: {
+      selector: [
+        {
+          type: 'TextQuoteSelector',
+          exact: 'ngil',
+        },
+        {
+          type: 'TextPositionSelector',
+          start: 630,
+          end: 800,
+        },
+      ],
+    },
+  },
+]
+
 export default function Transcript() {
+  const formatter = function (annotation: any) {
+    const classes = []
+    const tags = annotation.body?.filter((ab: any) => ab.purpose === 'tagging')
+
+    if (tags.filter((t: any) => t.value === 'first')) {
+      classes.push(styles.tagsFirst)
+    }
+
+    return tags.length > 0 ? classes.join(' ') : ''
+  }
+
+  const myRef = useRef(null)
+  
+  useEffect(() => {
+    const initR = async () => {
+      const r = await import('@recogito/recogito-js')
+      const recogito = r.init({ content: myRef.current, formatter })
+
+      recogito.setAnnotations(exampleAnnotations)
+    }
+    initR()
+  }, [])
+
   return (
     <div>
       <h3>Transcript</h3>
-      <p className={styles.transcript}>
+      <div ref={myRef} className={styles.transcript}>
         Nunc vitae nisl sit amet nunc cursus pulvinar vel eget ligula. Maecenas
         nec lacinia nulla. Praesent bibendum nunc enim, eu tempus odio faucibus
         sed. Proin ipsum neque, dictum id eleifend ac, elementum sed justo.
@@ -47,7 +128,7 @@ export default function Transcript() {
         Proin mollis dapibus elit dapibus feugiat. Maecenas non diam et ipsum
         porta bibendum ut non odio. Suspendisse in hendrerit dui. Ut ullamcorper
         sapien eu aliquet sollicitudin.
-      </p>
+      </div>
     </div>
   )
 }

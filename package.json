@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@recogito/recogito-js": "^1.8.4",
     "just-kebab-case": "^4.2.0",
     "next": "14.0.4",
     "react": "^18",
