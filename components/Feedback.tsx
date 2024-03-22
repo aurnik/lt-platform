@@ -22,7 +22,11 @@ export default function Feedback() {
         {RULES.map((rule, index) => (
           <li
             key={rule}
-            style={{ '--border-color': `hsl(${30 * index},100%,50%)` }}
+            style={
+              {
+                '--border-color': `hsl(${30 * index},100%,50%)`,
+              } as React.CSSProperties
+            }
           >
             {rule}
           </li>
